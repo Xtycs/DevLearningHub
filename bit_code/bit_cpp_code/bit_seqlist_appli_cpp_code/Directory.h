@@ -3,7 +3,7 @@
 #define NAME_MAX 20
 #define GENDER_MAX 10
 #define TEL_MAX 20
-#define ADDR_MAX 100
+#define ADDR_MAX 50
 
 typedef struct PersonInfo
 {
