@@ -1,0 +1,6 @@
+static function calling
+1. object . welcome()
+2. Name of Class :: welcome()
+
+Week9 or Week 10
+the erroe in textbook t1+t2+t3

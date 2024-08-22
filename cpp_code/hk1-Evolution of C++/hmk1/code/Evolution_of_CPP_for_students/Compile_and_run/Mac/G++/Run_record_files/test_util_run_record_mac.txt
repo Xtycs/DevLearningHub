@@ -1,0 +1,25 @@
+% ./test_util.out
+:) ------------------------------------------
+
+:)---------------  two Bytes object bt1 and bt2 are created ------------
+
+
+:) ----------------show bt1 (the empty one) as chars ------------------
+
+
+:) ----------------show bt2 as chars-----------------
+
+hello world
+:) ----------------show bt2 as numbers------------------
+
+104 101 108 108 111 32 119 111 114 108 100 
+:) ----------------bt3 is a clone of bt2. show bt3 as numbers and chars-----------------
+
+104 101 108 108 111 32 119 111 114 108 100 
+hello world
+:) ------------------------------------
+The space of bt3 is freed
+The space of bt1 is freed
+The space of bt2 is freed
+
+:)  Bye 

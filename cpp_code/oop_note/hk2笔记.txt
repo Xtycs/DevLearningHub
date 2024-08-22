@@ -1,0 +1,77 @@
+pure virtual function 
+The pure virtual destructor need definition
+
+——————————————————————————
+The use of % operator
+help us limit an random integer in a defined range, since the remainder always lower than the devisor and greater than 0.
+For instance: 一个随机数r，想要将其限制在[ 0 , size-1]内， 使用 r % size即可
+
+
+template <typename N, typename T, typename P, P nullP_>
+    std::ostream &operator<<(std::ostream &cot, MUST::List<N, T, P, nullP_> &lis);
+Maybe wrong:    friend std::ostream &operator<< <N, T, P, nullP_>(std::ostream &cot, const List<T> &lis);
+copilot advice: friend std::ostream &operator<< <N, T, P, nullP_>(std::ostream &cot, const List<N, T, P, nullP_> &lis);
+因为<<访问List内部数据，而这些数据的类型由List类的模板参数决定，所以operator的模板参数需要与List类型参数的模板参数相同
+
+this == &lis
+*this == this 有区别么? 如果传入的lis是reference?
+
+if(debug);
+if(this->debug);
+How to access the inherited mmebers : this->inherited_member
+
+typedef does not work for template related type (not totally decided)
+using THE_LIST = typename List<Node<T>, T, Node<T> *, nullptr>;
+如果里面不是Node<T>而是其他普通变量可以去掉typename
+
+~CommonList() { THE_LIST::delete_list(); }
+::运算符可以用来调用static member function(在类外也可以直接使用) 或基类的member function
+
+——————————————————————————————————————————————————————————————————
+template <typename N, typename T, typename P, P nullP_>
+    class List : public Bag<T>
+template <typename T>
+    class CommonList : public List<Node<T>, T, Node<T> *, nullptr>
+
+using P = Node<T>*;
+e -> data = [] (P ndp, const ED &d, EM &m) -> T& {return ndp->data_;}
+————————————————————————————————————————————————————————————————————————
+using THE_LIST = typename MUST::List<MUST::Node<T>, T, MUST::Node<T> *, nullptr>;
+Commonlist(const CommonList &cl) : THE_LIST(cl)
+        {
+            this->objCount++;
+        }
+
+————————————————————————————————————————————————————————————————————————
+// ----------------------  friend functions ------------------
+/*  One line is missing here. It says that, there is a function that is a friend of this class List. That function is an instance of the template function operator<<, while the the template argument is same as what are used to instantiate the template class List. 
+        **   provide the missing code  here    //*~~~~~~~~~ <Task 6> ~~~~~~~~~  ***/
+        //friend std::ostream &operator<< <N, T, P, nullP_>(std::ostream &cot, const List<T> &lis);
+        friend std::ostream &operator<< <N, T, P, nullP_>(std::ostream &cot, const List<N, T, P, nullP_> &lis);
+                                                                                |
+                                                                                ——————————
+template <typename N, typename T, typename P, P nullP_>                                 |                                          
+std::ostream &MUST::operator<<(std::ostream &cot, MUST::List<N, T, P, nullP_> &lis)     |
+{                                                                                        |
+    lis.show();                                                                          |
+    return cot;                                                                          |
+}                                                                                        |
+问题出在lis是否是const，show()不是const，所以const的lis是无法调用show()的————————————————————|
+
+
+
+
+    template <typename N, typename T, typename P, P nullP_>
+    std::ostream &operator<<(std::ostream &cot, MUST::List<N, T, P, nullP_> &lis);
+
+    friend std::ostream &operator<< <N, T, P, nullP_>(std::ostream &cot, List<N, T, P, nullP_> &lis);
+
+    template <typename N, typename T, typename P, P nullP_>
+std::ostream & MUST::operator<<(std::ostream &cot, MUST::List<N, T, P, nullP_> &lis)
+{
+    lis.show();
+    return cot;
+}
+
+
+

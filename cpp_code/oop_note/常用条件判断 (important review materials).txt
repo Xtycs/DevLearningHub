@@ -1,0 +1,383 @@
+using namespace std;
+using Vector::Vector;
+using std::ostream
+using std::cout;
+using std::endl;
+std::ostream &
+————————————————————————
+h文件中
+typedef struct
+{
+    char *addr;
+    size_t len;
+} Bytes;
+
+typedef enum
+{
+    False,
+    True
+} Boolean;
+
+Bytes make_bytes(const void *addr, size_t len);
+
+char *clone_str(const char *s);
+————————————————————————
+c文件中
+Bytes make_bytes(const void *addr, size_t len)
+{
+    Bytes b = {addr, len};
+    return b;
+}
+
+char *clone_str(const char *s)
+{
+    char *new_str = (char *)malloc(strlen(s) + 1);
+    if (new_str == NULL)
+    {
+        printf("Memmory allocation faild");
+        exit(1);
+    }
+    memmove(new_str, s, strlen(s) + 1);
+    //strcpy(new_str, s);
+    return new_str;
+}
+
+
+————————————————————————
+想要通过id取的某个歌曲
+Song * sp==NULL ;//希望让这个空指针指向某个符合id的克隆歌曲
+Boolean result = getsongbyid(self , id , &sp)//将sp指针的地址输入并视为二级指针即可
+
+在v2版本中歌曲存储在void * storage;中，void类型使其无法像数组一样直接[ ] 访问并打印，需要先强制转换
+char * songs;
+songs[i]是一个字符
+
+Song *songs = (Song*)self->storage == (Song*)void* storage == Song* storage
+song[i]是一个Song
+
+在struct musicplayer中，void * storage所以storage是一个void*指针，我如果想在storage中存储Song*类型数据，那么我需要把storage转换为Song**，这样我用[ ]访问得到的数据就是Song*类型
+如果想要一个数组存储Song*型数据要不用Song* arr[ ] 或者 Song** arr
+const Song **songs = (Song **)self->storage;
+    for (int i = 0; i < how_many_songs(self); i++)
+    {
+        if (songs[i] != NULL)
+        {
+            play_song(songs[i]);
+        }
+    }
+不过这样也偏离了模仿OOP编程模式的意图
+
+——————————————————————————
+在musicPlayer中有void* storage变量，在添加歌曲进入MP1的storage时需要强制转换为(Storage*)类型，但是这种类型转换不会改变原始变量的类型，当你将 void* 类型的 storage 转换为 Storage* 类型时，你只是创建了一个新的 Storage* 类型的指针，它和原始的 void* 指针指向同一块内存，并以此进行更改。原始的 storage 变量在 Music_player 结构体中仍然是 void* 类型
+
+——————————————————————————
+util2.h
+在命名空间内外定义函数或类的成员函数方法
+namespace util2
+{
+    void func();
+}
+void util2::func() { };
+
+namespace util2
+{
+    class Bytes
+    {
+         public:
+              void func();
+    };
+} 
+void util2::Bytes::func() { }; //连续使用两次解析符::
+
+——————————————————————————
+***new new[ ] delete delete[ ]区别***
+
+一.
+new和delete配对使用，new[ ]和delete[ ]配对使用
+
+~Bytes()
+{
+    delete[ ] static_cast<char*>(addr_);
+}
+后者表示addr是一个指向动态分配出来的数组的指针
+new和delete的都是指针，意义不同，前者是单个数据的地址，后者是整个数组的起始地址
+
+// 使用 new 分配单个对象的内存
+int* p = new int;
+// 使用 delete 释放单个对象的内存
+delete p;
+
+// 使用 new[] 分配对象数组的内存
+int* arr = new int[10];
+// 使用 delete[] 释放对象数组的内存
+delete[] arr;
+
+二.
+在 C++ 中，static_cast 是一种编译时类型转换，它可以在各种不同的类型之间进行转换，包括基本数据类型和类类型。static_cast 可以进行更多的检查，比 C 风格的类型转换更安全。 delete[] 运算符需要知道要释放的数组的元素类型，以便它可以正确地调用每个元素的析构函数
+——————————————————————————
+***类的大小***
+
+一个类的大小由数据成员决定，成员函数不会增加类的大小
+std::cout << "Size of Bytes: " << sizeof(util2::Bytes) << " bytes\n";
+————————————————————————————
+***克隆的两种方法***
+
+1.copy constructor
+util2::Bytes bt3 = util2::Bytes(bt2);//初始化的同时直接创建，思路是创建一定大小空间，直接用内存操作函数全部复制
+
+2.overloading operator =
+util2::Bytes bt4; 
+bt4 = bt2; //先创建后克隆，bt2数据的内存大小很可能不等于原先bt4，所以思路是删除原先bt4的内存分配的数据并创建开辟新内存放新数据，原本的bt4依然存在，不过此时依然返回*this并作为&reference返回，确保连续赋值==时依然有效
+
+—————————————————————————————
+***delete误区***
+
+一个误区要注意，使用delete删除了某个指针所指向的空间后，指针本身依然存在并指向已删除空间，要重置为nullptr,避免悬挂指针问题
+nullptr包含在std::nullptr-t中，在c++中不要使用NULL
+
+
+—————————————————————————————
+***static member静态成员***
+
+static member像类的性质而非object所独有的数据，
+class MyClass {
+public:
+    static int static_member;
+};
+
+int MyClass::static_member = 0;  // 用作用域解析符:: 初始化静态成员
+
+
+—————————————————————————————
+***enumeration枚举***
+
+anonymous enum匿名枚举
+enum {LIMIT = 200}; //用法类似于#define
+
+enum枚举
+typedef enum
+{
+    False,//枚举类型的默认值从0开始，每个大1，所以False被视为0，True被视为1
+    True
+} Boolean;
+
+还有限定作用域和不限定作用域的枚举使用>>>
+
+—————————————————————————————
+***Doxygen风格注释***Doxygen 是一个流行的文档生成工具，它可以从源代码中的特殊格式注释生成文档
+ /**
+     * @brief show the information of a song in some way.
+     * 
+     * @param id : the unique id of a song in the device. An id is valid when  1<= id <= the number of songs  
+     * @return true : when the song with the id is valid.
+     * @return false : if the song with the id is not valid.  
+     */
+    bool play_song_by_id(int id) const;
+——————————————————————————————
+***重载const运算符[ ]***
+const Music_player player; //这个播放器用普通[ ] 无法访问
+
+const Song& song=player[1]; //用const类型重载函数以及返回const&值的[ ] 才能访问，但也不能更改
+
+——————————————————————————————
+***member function and friend function***
+有时需要某个函数作为全局函数，则定义为友函数即可，成员函数只能为类成员所用
+
+——————————————————————————————
+>>>>>>***Class's Underlying logic***<<<<<<
+在克隆一个类或结构体时，如果都是基本数据类型，没有任何问题，如果有嵌套的类成员，要求嵌套的类有自己的copy constructor
+new Song;//开辟空间并存入默认的Song
+new Song(s); //开辟空间并使用默认复制构造函数复制s的数据
+
+从而实现代码量极小的克隆函数 (注意这不是copy constructor)
+Song *clonesong = new Song(s);
+return clone_song;
+注意，这种机制只适用于复制构造函数。对于其他类型的函数，如赋值运算符或移动构造函数，你需要为每个类提供一个函数。这是因为编译器生成的默认函数可能不会按照你期望的方式工作。例如，编译器生成的默认赋值运算符会逐个赋值每个成员，这对于需要深复制的成员可能是错误的。
+
+不过这一切的前提是嵌套的子类当中特殊成员都有自己的copy constructor
+特殊成员的copy constructor是由内存操作函数实现的
+addr_ = new char[bt.len_];
+std::memmove(addr_, bt.addr_, bt.len_);
+
+————————————————————————————
+***clone function | copy constructor | = overloading***
+1. 克隆函数 是一个普通的成员函数或者全局函数，创建新对象，存在现有对象
+Song original_song;
+Song *cloned_song = clone_song(original_song); // Clone function is called here
+
+2. copy constructor无返回值,在新对象创建时调用，创建新对象，存在现有对象
+Mpr::Music_player player1;
+Mpr::Music_player player2 = player1; // Copy constructor is called here
+
+3. = overloading 存在新对象，存在现有对象，是已存在的对象之间赋值
+Mpr::Music_player player1;
+Mpr::Music_player player2;
+player2 = player1; // Copy assignment operator is called here
+重载运算符不依赖成员的copy constructor, 而是在已有的内存中存储新元素，不过特殊数据需要在释放清除后存入
+
+——————————————————————————————
+***初始化列表***
+确保自建的类都有copy constructor的前提下，如果存在const or reference数据类型才需要使用初始化列表
+class MyClass {
+private:
+    const int const_member;
+    int& ref_member;
+
+public:
+    MyClass(int value, int& ref) : const_member(value), ref_member(ref) {
+        // Constructor body
+    }
+
+    MyClass(const MyClass& other) : const_member(other.const_member), ref_member(other.ref_member) {
+        // Copy constructor body
+    }
+};
+注意static的数据不要放进去，那个在创建时就自动输入了
+
+————————————————————————————————
+v2的clonedeviceMemory是克隆参数的player的storage
+v3的是将使用本成员函数的player的数据克隆进参数的storage
+————————————————————————————————
+使用到的vector标准库函数clear pushback
+————————————————————————————————
+通过使用howmany Song函数可以限制id的范围，因此确保
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#ifndef PAIR_H_H
+#define PAIR_H_H
+#include <iostream>
+using std::ostream;
+using std::istream;
+struct pair
+{
+    int a;
+    int b;
+};
+
+class Pair
+{
+private:
+    struct pair *p;
+public:
+     /* Provide the missing code */
+     Pair(int a, int b);
+     Pair();
+     ~Pair();
+     Pair &operator=(const Pair &p1);
+     Pair operator+(const Pair &p1);
+     Pair operator-();
+     operator bool() const;
+     friend ostream & operator<<(ostream & os, const Pair &p1);
+};
+#endif
+
+————————————————————————————
+
+#include "pair.h"
+using std::cout;
+Pair::Pair(int a,int b){
+    p=new struct pair;
+    p->a=a;
+    p->b=b;
+};
+
+Pair::Pair(){
+    p=new struct pair;
+    p->a=0;
+    p->b=0;
+};
+
+Pair::~Pair(){
+    std::cout<<"The Pair with(" <<p->a<<","<<p->b<<") is deleted"<<std::endl;
+    delete p;
+}
+
+Pair Pair::operator+(const Pair &p1){
+    return Pair(p->a+p1.p->a,p->b+p1.p->b);
+};
+
+Pair &Pair::operator=(const Pair &p1){
+    if (this==&p1)
+    {
+        return *this;
+    }
+    delete p;
+    p=new struct pair;
+    p->a=p1.p->a;
+    p->b=p1.p->b;
+    return *this;
+}
+
+Pair Pair::operator-(){
+    return Pair(-(p->a),-(p->b));
+};
+
+ostream &operator<<(ostream &os,const Pair &p1){
+    os<<"("<<p1.p->a<<","<<p1.p->b<<")"<<std::endl;
+    return os;
+}
+
+Pair::operator bool() const{
+    return p->a!=0||p->b!=0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

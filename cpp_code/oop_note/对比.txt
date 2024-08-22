@@ -1,0 +1,145 @@
+
+
+
+
+
+
+
+
+
+This is songplayerv3:
+using std::string;
+using std::vector;
+
+/*
+struct Song
+{
+    public:
+    string title;   // name of the song
+    string authors; // the name of the authors who wrote the song (or a piece of music)
+    string actor;   // the name of the singer(s), or the person played the music.
+    int year;       // year of publication
+    
+   
+    util2::Bytes media;
+};
+
+class Music_player
+{
+private:
+       
+    vector<Song> storage;
+
+    int limit; // the max num of songs can be stored in the memory. 
+    static int playerNum; // number of music player objects that exist.
+    enum {LIMIT = 200}; 
+public:
+       static Song *clone_song(const Song & s);
+
+    static void play_song(const Song & sp);
+
+       Music_player(int limit = 200);
+
+    Music_player(const Music_player &); // copy constructor
+
+   
+    ~Music_player(); // just say goodbye. no need to worry freeing space, since there is no reference or pointer data member. 
+    
+    /**
+     * @brief show the information of a song in some way.
+     * 
+     * @param id : the unique id of a song in the device. An id is valid when  1<= id <= the number of songs  
+     * @return true : when the song with the id is valid.
+     * @return false : if the song with the id is not valid.  
+     */
+    bool play_song_by_id(int id) const; 
+    
+      // Play all songs in the device.
+    void play_all_songs() const;
+
+    /**
+     * @brief Return the id of a song according to the title
+     * 
+     * @param title : a string object
+     * @return int : when the song with title is not found, return -1; otherwise, if a song with the title is the nth one in the memory, n >=1, n is returned.  
+     */
+    int find_song_id(const string & title) const ; 
+    
+    // return the number of songs currently stored in the device. 
+    int how_many_songs() const ; 
+    
+    // add a clone of the song f into the player.
+    // when fail, that means the memory of the device is full (number of songs reaches the limit), return -1
+    // Whe sucess, the id of the song in the device, is returned. 
+     int add_song(const Song & f); 
+     
+    // Although there is a copy constructor, the clone_device_memory() and replace_device_memory() functions may still needed. 
+
+     // return a clone of the memory (all song records of the device)
+    bool clone_device_memory(vector<Song> & backup) const ; 
+
+    
+    /* the memory of the device is emptied.  */
+
+    /**
+     * @brief replace the content of the device by copying from some backup of song
+     * 
+     * @param backup : some storage of songs
+     * @note [Computation]
+     * @note - If the limit of the player is less than the number of songs in backup, print some error message and do nothing. 
+     * @note - Otherwise, the content of <mem_> is emptied, and a clone of each song in <backup> is added into mem_
+     */
+    void replace_device_memory(const vector<Song> & backup); 
+
+    bool delete_song(int id); 
+
+    bool empty_device_memory(); 
+
+    // ................... overload some operators: ....................
+    /**
+     * @brief Add a clone of a song into the memory of the music player
+     * 
+     * @param f : a reference to a song. 
+     * @return Music_player& : The reference of <this> object. 
+     * @note It it is similar to the add_song() function. 
+     * @note - When a song failes to be added into the memory, nothing is changed. 
+     * @note [Example:]
+     * @note Music_player p; 
+     * @note p+= song1;  // one song is added into the player.
+     * @note ((p+= song2)+=song3)+=song4;  // three songs added into the player
+     */
+    Music_player & operator+=(const Song& f); 
+
+    // Similar to the get_song_by_id(function). 
+    // return a reference, not a clone of the song with id n
+    // It is used when possible changes can be made to the Song with id n. 
+    // It is cutomized [], valid index >= 1. 
+    //  warning: dynamic exception specifications are deprecated in C++11 [-Wdeprecated]
+    // Song & operator[](int n) throw (int); 
+
+
+
+
+    // https://en.cppreference.com/w/cpp/language/noexcept_spec
+    /* noexcept is an improved version of throw(), which is deprecated in C++11.
+    */
+   // the prototype of the overloaded [] operator, the non-const version.
+    Song & operator[](int n) noexcept(false); 
+
+    // It is used when a Mysic_player is const one. 
+    // For example. 
+    // const Music_player x; 
+    // consg Song & = x[2]; 
+    // const Song & operator[](int n) const throw (int); 
+    /***  Provide the prototype of the overloaded [] operator, the const version. ~~~~~~~~~  //*<Task 52> ~~~~~~~~~   ***/
+    const Song & operator[](int n) const noexcept(false);
+
+    
+    // show the information of all songs in the device. Just like play_all_songs();   
+    /***  Provide the missing prototype of the overloaded << operator for the Music_player class  ~~~~~~~~~  //*<Task 53> ~~~~~~~~~  ***/
+    friend std::ostream & operator<<(std::ostream &os, const Music_player &player);
+};
+
+#endif
+
+

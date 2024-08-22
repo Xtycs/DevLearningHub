@@ -1,0 +1,277 @@
+CL>test_v3.exe
+
+:) ---- One player is turned on ----
+:) there are 1 player objects existing.
+
+:) ---- One player is turned on ----
+:) there are 2 player objects existing.
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) After turning on the two player, there are 0 songs in Player 1, and 0 songs in Player 2.
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Two songs are added into player 1
+:) Three songs are added into player 2 using operator+=
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) After adding some songs, Player 1 has 2 songs, and Player 2 has 3 songs
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Now, play all the songs in Player 1:
+
+ :) Please hit the Enter key one or two times to continue
+
+
+
+:) ........ Playing song with id = 1 ...................
+Title: Be water my friend
+Authors: Bruce Lee
+Actors: Lee Fans
+Year: 1970
+Media: Empty your mind. Be formless. Shapeless. Like water. You put water into a cup, it becomes the cup. You put water into a bottle, it becomes the bottle. You put it in a teapot, it becomes the teapot. Water can flow, or it can crash. Be water, my friend.
+
+:) ........ Playing song with id = 2 ...................
+Title: Can't Help Falling in Love
+Authors: Hugo Peretti, Luigi Creatore, and George David Weiss
+Actors: Elvis Presley
+Year: 1961
+Media: Wise men say
+Only fools, only fools rush in
+Oh, but I, but I, I can't help falling in love with you
+Shall I stay?
+Would it be, would it be a sin?
+If I can't help falling in love with you
+
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Now, play all the songs in Player 2:
+
+ :) Please hit the Enter key one or two times to continue
+
+
+
+:) ........ Playing song with id = 1 ...................
+Title: My Heart Will Go On
+Authors: James Horner, Will Jennings
+Actors: Celine Dion
+Year: 1998
+Media: Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+
+:) ........ Playing song with id = 2 ...................
+Title: Rock with your
+Authors: Rod Temperton, Quincy Jones
+Actors: Michael Jackson
+Year: 1979
+Media: Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+
+:) ........ Playing song with id = 3 ...................
+Title: Twinkle twinkle little star
+Authors: Jane Taylor, Wolfgang Amadeus Mozart
+Actors: A boy
+Year: 1806
+Media:  Twinkle twinkle little star.
+ How I wonder what you are.
+ above the world so high.
+ Like a diamond in the sky.
+ Twinkle twinkle little star.
+ How I wonder what you are.
+
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Please input a string, which is a substring of the title of a song to be found in Player 1
+
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) The song is not found
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Now make a clone of Player 2
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) A clone of the device memory is cloned sucessfully
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) The song with ID 3 in Player 2 is :
+
+:) Playing The song with id 3
+Title: Twinkle twinkle little star
+Authors: Jane Taylor, Wolfgang Amadeus Mozart
+Actors: A boy
+Year: 1806
+Media:  Twinkle twinkle little star.
+ How I wonder what you are.
+ above the world so high.
+ Like a diamond in the sky.
+ Twinkle twinkle little star.
+ How I wonder what you are.
+
+
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) The song with ID 2 in Player 2 is (testing operator [] ):
+
+Title: Rock with your
+Authors: Rod Temperton, Quincy Jones
+Actors: Michael Jackson
+Year: 1979
+Media: Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+:) The clone of the song with ID 2 is :
+
+Title: Rock with your
+Authors: Rod Temperton, Quincy Jones
+Actors: Michael Jackson
+Year: 1979
+Media: Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Now, deleting the song with ID 3 from player 2
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) After deleting the song 3, now the songs in Player 2 are (testing the operator<<):
+
+ :) Please hit the Enter key one or two times to continue
+
+
+
+:) ........ Playing song with id = 1 ...................
+Title: My Heart Will Go On
+Authors: James Horner, Will Jennings
+Actors: Celine Dion
+Year: 1998
+Media: Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+
+:) ........ Playing song with id = 2 ...................
+Title: Rock with your
+Authors: Rod Temperton, Quincy Jones
+Actors: Michael Jackson
+Year: 1979
+Media: Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Replacing the memory of P1 by the earlier clone of P2
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Now the songs in Player 1 are:
+
+ :) Please hit the Enter key one or two times to continue
+
+
+
+:) ........ Playing song with id = 1 ...................
+Title: My Heart Will Go On
+Authors: James Horner, Will Jennings
+Actors: Celine Dion
+Year: 1998
+Media: Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+
+:) ........ Playing song with id = 2 ...................
+Title: Rock with your
+Authors: Rod Temperton, Quincy Jones
+Actors: Michael Jackson
+Year: 1979
+Media: Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+
+:) ........ Playing song with id = 3 ...................
+Title: Twinkle twinkle little star
+Authors: Jane Taylor, Wolfgang Amadeus Mozart
+Actors: A boy
+Year: 1806
+Media:  Twinkle twinkle little star.
+ How I wonder what you are.
+ above the world so high.
+ Like a diamond in the sky.
+ Twinkle twinkle little star.
+ How I wonder what you are.
+
+
+ :) Please hit the Enter key one or two times to continue
+
+
+
+:) ---- One player is turned on ----
+:) there are 3 player objects existing.
+ P3 is a copy of p1. The song with id 1 in p3 is
+Title: My Heart Will Go On
+Authors: James Horner, Will Jennings
+Actors: Celine Dion
+Year: 1998
+Media: Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+  The song with id -1 in p3 is (testing const [])
+The id -1 is invalid
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Now the players p1 and p2 are ready to turn off
+
+:) ---- One player is turned off  ----
+
+:) there are 2 player objects remaining
+
+:) ---- One player is turned off  ----
+
+:) there are 1 player objects remaining

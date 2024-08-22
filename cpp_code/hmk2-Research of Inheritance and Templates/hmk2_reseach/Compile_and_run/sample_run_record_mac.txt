@@ -1,0 +1,108 @@
+prompt>  % make all
+g++ -c -std=c++11 ../../../Code/test_common_list.cpp
+g++ -o  testCommonList.out test_common_list.o -undefined dynamic_lookup
+prompt>  % ./testCommonList.out
+:) main is called 
+:) one object of ListInt is made  
+:) --------- The list content is ----------------
+:) it is a common list
+:) A list <ListInt_1>; Number of items is :10; limit is : 200
+0) 171666507
+1) 1128445228
+2) 1350860339
+3) 712601489
+4) 176926304
+5) 1483023880
+6) 1487144078
+7) 2015835160
+8) 1439519048
+9) 445872634
+:) --------- A copy of the list has the content  ----------------
+:) it is a common list
+:) A list <ListInt_2>; Number of items is :10; limit is : 200
+0) 171666507
+1) 1128445228
+2) 1350860339
+3) 712601489
+4) 176926304
+5) 1483023880
+6) 1487144078
+7) 2015835160
+8) 1439519048
+9) 445872634
+:) ------------- Testing the functions of Bag ----------------- 
+:)  putting in two items 100 and 200. The operation is  successful 
+:)  taking an item out is successful the item is: 712601489
+:) now the list has 11 items. It content is: 
+
+:) it is a common list
+:) A list <ListInt_1>; Number of items is :11; limit is : 200
+0) 171666507
+1) 1128445228
+2) 1350860339
+3) 176926304
+4) 1483023880
+5) 1487144078
+6) 2015835160
+7) 1439519048
+8) 445872634
+9) 100
+10) 200
+:) The 5th node contains the data : 1487144078
+:) After lis = lis2, the content of lis is 
+:) it is a common list
+:) A list <ListInt_1>; Number of items is :10; limit is : 200
+0) 171666507
+1) 1128445228
+2) 1350860339
+3) 712601489
+4) 176926304
+5) 1483023880
+6) 1487144078
+7) 2015835160
+8) 1439519048
+9) 445872634
+
+:) After lis = lis2, the content of lis2 is 
+:) it is a common list
+:) A list <ListInt_2>; Number of items is :10; limit is : 200
+0) 171666507
+1) 1128445228
+2) 1350860339
+3) 712601489
+4) 176926304
+5) 1483023880
+6) 1487144078
+7) 2015835160
+8) 1439519048
+9) 445872634
+
+:) ------------- dls, the double list, has the content :  
+:) it is a common list
+:) A list <dls one>; Number of items is :5; limit is : 5
+0) 0.835353
+1) 4.02767
+2) 0.997229
+3) 1.40035
+4) 0.368211
+:) ------------- dls2, which is copied from dls, has the content :  
+:) it is a common list
+:) A list <dls one>; Number of items is :5; limit is : 5
+0) 0.835353
+1) 4.02767
+2) 0.997229
+3) 1.40035
+4) 0.368211
+:) --------- Printing the list of students    ----------------
+:) it is a common list
+:) A list  <Student list one>; Number of items is :3; limit is : 200
+0) A student, Name: Alice id: 1
+1) A student, Name: Bob id: 2
+2) A student, Name: Charlie id: 3
+:) -------------at the end of main(), testing the destructors ----------------- 
+ The list:  <Student list one> is deleted. The number of remaining object of this list class is: 0
+ The list: <dls two> is deleted. The number of remaining object of this list class is: 1
+ The list: <dls one> is deleted. The number of remaining object of this list class is: 0
+ The list: <ListInt_2> is deleted. The number of remaining object of this list class is: 1
+ The list: <ListInt_1> is deleted. The number of remaining object of this list class is: 0
+zeal@Zhiyaos-Mac-Studio G++ % Bai Li 

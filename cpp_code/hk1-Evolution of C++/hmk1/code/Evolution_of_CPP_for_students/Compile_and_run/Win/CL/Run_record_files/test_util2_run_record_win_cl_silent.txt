@@ -1,0 +1,20 @@
+CL>test_util2.exe
+:) ------------------------------------------
+
+:)---------------  two Bytes object bt1 and bt2 are created ------------
+
+:) ----------------calling bt1.show_as_chars() ------------------
+
+:) ----------------calling bt2.show_as_chars() ------------------
+hello world
+:) ----------------calling bt2.show_as_nums()------------------
+104 101 108 108 111 32 119 111 114 108 100
+:) ----------------bt3 is a clone of bt2 made by the copy constructor. Calling bt3.show_as_nums() and bt3.show_as_chars()------------------
+104 101 108 108 111 32 119 111 114 108 100
+hello world
+
+:) ----------------bt4 is also a clone of bt2 made by the overloaded =. Calling bt4.show_as_nums() and bt4.show_as_chars()------------------
+104 101 108 108 111 32 119 111 114 108 100
+hello world
+:) ------------------------------------------
+:)  Bye ......

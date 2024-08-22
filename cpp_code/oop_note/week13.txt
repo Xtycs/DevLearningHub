@@ -1,0 +1,93 @@
+                  Worker
+    virtual    / v / \    \ 
+              /   /   \    \
+            a    b     c    d  
+              \   \    /   /
+               \   \  /   /
+
+            WaiterSinger  (contains 3 worker subobject)
+------------------------------
+
+// typedef  int T;
+typedef  double  T;  // recompile 
+
+//.....
+
+review  qsort , the c function, 
+Good example of C's solution to general programming. 
+-----------------------
+
+In 14-14   in the main function we can create three stacks. 
+
+Stack<std::string> st;
+Stack<int> st;
+Stack<double > st;
+
+----------------------------
+14_16
+
+Type  * items;
+means 
+const char *  * items;
+
+
+
+on the heap: 
+
+|  *  |  *  |    |    |    |   |    |    |    | 
+   |
+   |
+   |
+   "1: Hank Gilgamesh"   
+on some special memory section 
+
+-----------------------------------------------
+*  template class is not a real class
+*  class code will be generated when there is information
+   template vs template instantiation. 
+*  class methods cannot be in a spearate .cpp file.
+ put them in the .h file.  
+---------------------------
+
+/* ??? */   int *    x =  new int; ; 
+
+/* ??? */   int * *  x =  new (int *) ;  
+
+/ * ??? */  int * *   x =  new (int * ) [10] ; 
+--------------------------
+14_19
+cout << ratings[i].second() ;
+
+Since the statement does not require const version of sceond(), the non-const version of second() is used. 
+
+14_20
+cout << guy.blab(10.0, 2.3) << endl;
+
+compiler knows that U has type double, according to 2.3
+
+--------------------------------
+// an impossible situation. 
+
+template <class T1, class T2>'
+class pair 
+
+When instantiate the class 
+pair<int, /???? the address of the same kind of pair ???> ??? 
+
+
+
+------------------------------------
+    ManyFriend<int> hfi1(10); // implicit instantiation 
+    ManyFriend<int> hfi2(20);
+
+
+    template class ManyFriend<int> ;  //  explicit instantition 
+
+ // ?? implicit specialization 
+ explicit specialization
+
+ Monday Covers the template part of chapter 8 ()
+
+ Tuesday class needs to cover slides of chapter 8() 
+
+finished chapter 14. 

@@ -1,0 +1,256 @@
+G++>test_v1.exe
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) ~~~~~~~~ Welcome, enjoy the music ! ~~~~~~~~~~~~~~~~~
+:) After turning on the device, there are 0 songs in the it
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) After adding 5 songs,  there are 5 songs in the it
+:) Now, play all of them
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ....  Playing the song with id  = 1 ....
+Title :  Be water my friend
+Authors : Bruce Lee
+Year: 1970
+Empty your mind. Be formless. Shapeless. Like water. You put water into a cup, it becomes the cup. You put water into a bottle, it becomes the bottle. You put it in a teapot, it becomes the teapot. Water can flow, or it can crash. Be water, my friend.
+:)...............................
+:) ....  Playing the song with id  = 2 ....
+Title :  Can't Help Falling in Love
+Authors : Hugo Peretti, Luigi Creatore, and George David Weiss
+Year: 1961
+Wise men say
+Only fools, only fools rush in
+Oh, but I, but I, I can't help falling in love with you
+Shall I stay?
+Would it be, would it be a sin?
+If I can't help falling in love with you
+
+:)...............................
+:) ....  Playing the song with id  = 3 ....
+Title :  My Heart Will Go On
+Authors : James Horner, Will Jennings
+Year: 1998
+Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+:)...............................
+:) ....  Playing the song with id  = 4 ....
+Title :  Rock with your
+Authors : Rod Temperton, Quincy Jones
+Year: 1979
+Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+:)...............................
+:) ....  Playing the song with id  = 5 ....
+Title :  Twinkle twinkle little star
+Authors : Jane Taylor, Wolfgang Amadeus Mozart
+Year: 1806
+ Twinkle twinkle little star.
+ How I wonder what you are.
+ above the world so high.
+ Like a diamond in the sky.
+ Twinkle twinkle little star.
+ How I wonder what you are.
+
+:)...............................
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Please input a string, which is a substring of the title of a song to be found
+water
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) The song is found, whose id is 1
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Now make a clone of the memory
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) A clone of the device memory is cloned sucessfully
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) The song with ID 3 is :
+
+:) ....  Playing the song with id  = 3 ....
+Title :  My Heart Will Go On
+Authors : James Horner, Will Jennings
+Year: 1998
+Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+:)...............................
+:) The song with ID 2 is :
+
+Title :  Can't Help Falling in Love
+Authors : Hugo Peretti, Luigi Creatore, and George David Weiss
+Year: 1961
+Wise men say
+Only fools, only fools rush in
+Oh, but I, but I, I can't help falling in love with you
+Shall I stay?
+Would it be, would it be a sin?
+If I can't help falling in love with you
+:) The clone of the song with ID 2 is :
+
+Title :  Can't Help Falling in Love
+Authors : Hugo Peretti, Luigi Creatore, and George David Weiss
+Year: 1961
+Wise men say
+Only fools, only fools rush in
+Oh, but I, but I, I can't help falling in love with you
+Shall I stay?
+Would it be, would it be a sin?
+If I can't help falling in love with you
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Now, deleting the song with ID 3
+:) After deleting the song 3, now the songs in the device are:
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ....  Playing the song with id  = 1 ....
+Title :  Be water my friend
+Authors : Bruce Lee
+Year: 1970
+Empty your mind. Be formless. Shapeless. Like water. You put water into a cup, it becomes the cup. You put water into a bottle, it becomes the bottle. You put it in a teapot, it becomes the teapot. Water can flow, or it can crash. Be water, my friend.
+:)...............................
+:) ....  Playing the song with id  = 2 ....
+Title :  Can't Help Falling in Love
+Authors : Hugo Peretti, Luigi Creatore, and George David Weiss
+Year: 1961
+Wise men say
+Only fools, only fools rush in
+Oh, but I, but I, I can't help falling in love with you
+Shall I stay?
+Would it be, would it be a sin?
+If I can't help falling in love with you
+
+:)...............................
+:) ....  Playing the song with id  = 4 ....
+Title :  Rock with your
+Authors : Rod Temperton, Quincy Jones
+Year: 1979
+Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+:)...............................
+:) ....  Playing the song with id  = 5 ....
+Title :  Twinkle twinkle little star
+Authors : Jane Taylor, Wolfgang Amadeus Mozart
+Year: 1806
+ Twinkle twinkle little star.
+ How I wonder what you are.
+ above the world so high.
+ Like a diamond in the sky.
+ Twinkle twinkle little star.
+ How I wonder what you are.
+
+:)...............................
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Replacing the memory with the clone
+The song with id 1 is deleted
+The song with id 2 is deleted
+The song with id 4 is deleted
+The song with id 5 is deleted
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Now the songs in the device are:
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ....  Playing the song with id  = 1 ....
+Title :  Be water my friend
+Authors : Bruce Lee
+Year: 1970
+Empty your mind. Be formless. Shapeless. Like water. You put water into a cup, it becomes the cup. You put water into a bottle, it becomes the bottle. You put it in a teapot, it becomes the teapot. Water can flow, or it can crash. Be water, my friend.
+:)...............................
+:) ....  Playing the song with id  = 2 ....
+Title :  Can't Help Falling in Love
+Authors : Hugo Peretti, Luigi Creatore, and George David Weiss
+Year: 1961
+Wise men say
+Only fools, only fools rush in
+Oh, but I, but I, I can't help falling in love with you
+Shall I stay?
+Would it be, would it be a sin?
+If I can't help falling in love with you
+
+:)...............................
+:) ....  Playing the song with id  = 3 ....
+Title :  My Heart Will Go On
+Authors : James Horner, Will Jennings
+Year: 1998
+Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+:)...............................
+:) ....  Playing the song with id  = 4 ....
+Title :  Rock with your
+Authors : Rod Temperton, Quincy Jones
+Year: 1979
+Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+:)...............................
+:) ....  Playing the song with id  = 5 ....
+Title :  Twinkle twinkle little star
+Authors : Jane Taylor, Wolfgang Amadeus Mozart
+Year: 1806
+ Twinkle twinkle little star.
+ How I wonder what you are.
+ above the world so high.
+ Like a diamond in the sky.
+ Twinkle twinkle little star.
+ How I wonder what you are.
+
+:)...............................
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Now turn off the device
+
+The song with id 1 is deleted
+The song with id 2 is deleted
+The song with id 3 is deleted
+The song with id 4 is deleted
+The song with id 5 is deleted
+:) ~~~~~~~~~~ Bye ~~~~~~~~~~~~~

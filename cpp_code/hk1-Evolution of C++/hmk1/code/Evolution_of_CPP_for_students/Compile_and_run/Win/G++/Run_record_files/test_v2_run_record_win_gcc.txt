@@ -1,0 +1,240 @@
+G++>test_v2.exe
+:) ~~~~~~~~ One device is turned on. Welcome, enjoy the Song Player made by HuaWei ! ~~~~~~~~~~~~~~~~~
+:) .......... One device is turned on...... turn on the player in my way like OpenAI ......
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) After turning on the two player, there are 0 songs in Player 1, and 0 songs in Player 2.
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Two songs are added into player 1
+:) Two songs are added into player 2
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) After adding some songs, Player 1 has   2 songs, and Player 2 has 3 songs
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Now, play all the songs in Player 1:
+
+ :) Please hit the Enter key one or two times to continue
+
+
+
+:) --- Playing song with id 1 ---
+Title :  Be water my friend
+Authors : Bruce Lee
+Year: 1970
+Empty your mind. Be formless. Shapeless. Like water. You put water into a cup, it becomes the cup. You put water into a bottle, it becomes the bottle. You put it in a teapot, it becomes the teapot. Water can flow, or it can crash. Be water, my friend.
+:) --- Playing song with id 2 ---
+Title :  Can't Help Falling in Love
+Authors : Hugo Peretti, Luigi Creatore, and George David Weiss
+Year: 1961
+Wise men say
+Only fools, only fools rush in
+Oh, but I, but I, I can't help falling in love with you
+Shall I stay?
+Would it be, would it be a sin?
+If I can't help falling in love with you
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) Now, play all the songs in Player 2:
+
+ :) Please hit the Enter key one or two times to continue
+
+
+...... Play all the songs in my way ......
+
+:) --- Playing song with id 1 ---
+Title :  My Heart Will Go On
+Authors : James Horner, Will Jennings
+Year: 1998
+Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+:) --- Playing song with id 2 ---
+Title :  Rock with your
+Authors : Rod Temperton, Quincy Jones
+Year: 1979
+Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+:) --- Playing song with id 3 ---
+Title :  Twinkle twinkle little star
+Authors : Jane Taylor, Wolfgang Amadeus Mozart
+Year: 1806
+ Twinkle twinkle little star.
+ How I wonder what you are.
+ above the world so high.
+ Like a diamond in the sky.
+ Twinkle twinkle little star.
+ How I wonder what you are.
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Please input a string, which is a substring of the title of a song to be found in Player 1
+water
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) The song is found, whose id is 1
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Now make a clone of Player 2
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) A clone of the device memory is cloned sucessfully
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) The song with ID 3 in Player 2 is :
+
+:) ...... Play the song in my way ......
+Title :  Twinkle twinkle little star
+Authors : Jane Taylor, Wolfgang Amadeus Mozart
+Year: 1806
+ Twinkle twinkle little star.
+ How I wonder what you are.
+ above the world so high.
+ Like a diamond in the sky.
+ Twinkle twinkle little star.
+ How I wonder what you are.
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) The song with ID 2 in Player 2 is :
+
+Title :  Rock with your
+Authors : Rod Temperton, Quincy Jones
+Year: 1979
+Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+:) The clone of the song with ID 2 is :
+
+Title :  Rock with your
+Authors : Rod Temperton, Quincy Jones
+Year: 1979
+Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Now, deleting the song with ID 3 from player 2
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) After deleting the song 3, now the songs in Player 2 are:
+
+ :) Please hit the Enter key one or two times to continue
+
+
+...... Play all the songs in my way ......
+
+:) --- Playing song with id 1 ---
+Title :  My Heart Will Go On
+Authors : James Horner, Will Jennings
+Year: 1998
+Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+:) --- Playing song with id 2 ---
+Title :  Rock with your
+Authors : Rod Temperton, Quincy Jones
+Year: 1979
+Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Replacing the memory of P1 by the earlier clone of P2
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) 2 songs are deleted
+:) Now the songs in Player 1 are:
+
+ :) Please hit the Enter key one or two times to continue
+
+
+
+:) --- Playing song with id 1 ---
+Title :  My Heart Will Go On
+Authors : James Horner, Will Jennings
+Year: 1998
+Every night in my dreams
+I see you, I feel you
+That is how I know you go on
+
+:) --- Playing song with id 2 ---
+Title :  Rock with your
+Authors : Rod Temperton, Quincy Jones
+Year: 1979
+Girl, close your eyes.
+Let that rhythm get into you.
+Don't try to fight it.
+There ain't nothin' that you can do.
+Relax your mind.
+
+:) --- Playing song with id 3 ---
+Title :  Twinkle twinkle little star
+Authors : Jane Taylor, Wolfgang Amadeus Mozart
+Year: 1806
+ Twinkle twinkle little star.
+ How I wonder what you are.
+ above the world so high.
+ Like a diamond in the sky.
+ Twinkle twinkle little star.
+ How I wonder what you are.
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Now turn off the player P2
+
+:) 3 songs are deleted
+:) ~~~~~~~~~~From Huawei:  Bye ~~~~~~~~~~~~~
+
+ :) Please hit the Enter key one or two times to continue
+
+
+:) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:) Now turn off the player P2
+
+:) 2 songs are deleted
+:) ...... turn off the player  in my way ......
+:) ~~~~~~~~~~From OpenAI:  Bye ~~~~~~~~~~~~~

@@ -1,0 +1,9 @@
+- course schedule and outline
+- chapter 0 and 1
+- myFirst.cpp 
+- carrot.cpp 
+
+Exercise
+On your computer, set up using the g++ compiler
+compile and run all the programs of the textbook in the first two chapters. 
+

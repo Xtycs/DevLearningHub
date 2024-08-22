@@ -1,0 +1,90 @@
+C++  == C  + OOP  +  Template 
+
+Object 
+OOP object oriented programming
+operator overloading
+function overloading 
+manipulator   :  endl 
+namespace 
+message sending 
+reference 
+----------------------------
+int carrots; 
+
+printf("I have %d carrots", carrots); 
+
+scanf("%d", &carrots);
+------------------------------
+Coding preparation 
+
+- Install a compiler on your computer 
+  - Windows :  Mingw32 , Mingw64
+       Install the files
+       Set up the path for the bin folder 
+  - Mac:  
+       g++ gcc is easily available 
+       (xcode commandline tools) 
+
+int x; 
+scanf("%d", &x);
+
+<< rule>>
+In C++ , a name should be declared before its usage. But, no need to declare all names at the beginning of a block. 
+
+---------------------
+c header files   c++ header files
+math.h          cmath
+string.h        cstring 
+ctype.h         cctype
+...
+---------------------
+naming style
+camel style:     helloWorld
+underscore style:  hello_world 
+c library style :   helloworld   helowld  strlen
+all upper case :   PI   RATIO 
+
+------------------------
+precondition of a function 
+ - assumming the parameters are ... 
+
+postcondition of function
+ - after calling the function, ... are true. 
+----------------------
+Chapter 3
+--------------------------
+floating point data are not precise
+0.1 cannot have exact description using float or double. 
+the exponent part of a floating number is 2-based. 
+
+
+
+------------------------
+int vs unsigned int 
+
+a suggestion: use int more than unsigned int 
+
+
+unsigned int x ; 
+x = -5;  // no error 
+
+int y = -8 ; // ok 
+
+x = 100 ;
+if( x > -5) 
+    puts("x is larger"); 
+else 
+    puts("x is smaller"); // this is the choice 
+----------------------
+
+unsigned int x  =  356; //maybe warning 
+unsigned int x  =  356U;  // no warning 
+---------------------
+#include <climits>
+int x = 9; 
+int y; 
+cin >> y; 
+int z; 
+// int z = x + y ; // prevent overflow ??? 
+if (y < INT_MAX - x)
+    z = x + y; 
